@@ -32,7 +32,6 @@
     "lint": "biome check .",
     "lint:fix": "biome check --write .",
     "prepare": "husky",
-    "postinstall": "husky",
     "prepublishOnly": "pnpm build",
     "release": "semantic-release"
   },
