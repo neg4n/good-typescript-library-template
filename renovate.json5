@@ -1,0 +1,5 @@
+{
+  // Skip renovate onboarding - start acting once installed.
+  "onboarding": false,
+  "requireConfig": "ignored"
+}

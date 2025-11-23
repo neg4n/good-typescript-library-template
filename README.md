@@ -1,6 +1,8 @@
-# TypeScript Library Template
+# Good TypeScript Library Template
 
 An opinionated production-ready TypeScript library template with automated builds, testing, and releases.
+
+And believe me. **It is good.**
 
 <img width="380" src="https://github.com/user-attachments/assets/e3ecf54c-13c4-4baa-a253-d2861d4bf4e9" />
 
@@ -8,6 +10,7 @@ An opinionated production-ready TypeScript library template with automated build
 
 - 📦 **Dual Package Support** - Outputs CommonJS and ESM builds
 - 🛡️ **Type Safety** - Extremely strict TypeScript configuration
+- 🔐 **Always up-to-date deps** - [Renovate][renovate] bot for CVE-aware automatic dependency updates
 - ✅ **Build Validation** - Uses `@arethetypeswrong/cli` to check package exports
 - 🧪 **Automated Testing** - Vitest with coverage reporting
 - 🎨 **Code Quality** - Biome linting and formatting with pre-commit hooks
@@ -39,7 +42,7 @@ An opinionated production-ready TypeScript library template with automated build
 Run this in your terminal _[GitHub CLI](https://cli.github.com) required_
 
 ```bash
-gh repo create my-typescript-library --clone --template neg4n/typescript-library-template --private && cd my-typescript-library
+gh repo create my-typescript-library --clone --template neg4n/good-typescript-library-template --private && cd my-typescript-library
 ```
 
 > [!NOTE]
@@ -49,7 +52,7 @@ gh repo create my-typescript-library --clone --template neg4n/typescript-library
 
 If for some reason you can't run the mentioned commands in your terminal, click the "Use this template ▾" button below (or in the top right corner of the repository page)
 
-<a href="https://github.com/new?template_name=typescript-library-template&template_owner=neg4n">
+<a href="https://github.com/new?template_name=good-typescript-library-template&template_owner=neg4n">
 <img src="https://github.com/user-attachments/assets/784be0dd-530f-4135-b042-ab59dc9124a6" width="200" />
 </a>
 
@@ -108,11 +111,15 @@ gh secret set ACTIONS_BRANCH_PROTECTION_BYPASS --body "your-pat-token-here"
 | `pnpm typecheck` | TypeScript type checking |
 | `pnpm release` | Create release (CI only) |
 
+## Renovate
+
+The 
+
 ## FAQ
 
 #### How do I modify the merging methods?
 
-`typescript-library-template` sets **rebase-only** at both repository and main branch levels. Here's how to modify this:
+`good-typescript-library-template` sets **rebase-only** at both repository and main branch levels. Here's how to modify this:
 
 ##### **Current Setup**
 - **Repository**: Rebase merging only (squash/merge disabled)
@@ -137,7 +144,7 @@ gh secret set ACTIONS_BRANCH_PROTECTION_BYPASS --body "your-pat-token-here"
 - **Different rules per branch**: Create additional rulesets for other branch patterns
 
 > [!TIP]
-> Since `typescript-library-template` is rebase-only, you must enable other methods in repository settings before rulesets can use them.
+> Since `good-typescript-library-template` is rebase-only, you must enable other methods in repository settings before rulesets can use them.
 
 #### How to solve pnpm lockfile error on my CI/CD?
 

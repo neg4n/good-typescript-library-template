@@ -1,5 +1,5 @@
 {
-  "name": "typescript-library-template",
+  "name": "good-typescript-library-template",
   "version": "0.0.1",
   "description": "A neg4n's template for creating TypeScript libraries",
   "type": "module",
