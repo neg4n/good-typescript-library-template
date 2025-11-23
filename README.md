@@ -10,7 +10,7 @@ And believe me. **It is good.**
 
 - 📦 **Dual Package Support** - Outputs CommonJS and ESM builds
 - 🛡️ **Type Safety** - Extremely strict TypeScript configuration
-- 🔐 **Always up-to-date deps** - [Renovate][renovate] bot for CVE-aware automatic dependency updates
+- 🔐 **Always up-to-date deps** - [Renovate](https://github.com/renovatebot/renovate) bot for CVE-aware automatic dependency updates
 - ✅ **Build Validation** - Uses `@arethetypeswrong/cli` to check package exports
 - 🧪 **Automated Testing** - Vitest with coverage reporting
 - 🎨 **Code Quality** - Biome linting and formatting with pre-commit hooks
@@ -113,7 +113,15 @@ gh secret set ACTIONS_BRANCH_PROTECTION_BYPASS --body "your-pat-token-here"
 
 ## Renovate
 
-The 
+`renovate.json5` already turns onboarding off, so Renovate will start opening update PRs as soon as the GitHub App is installed. Enable it like this:
+
+1. Visit https://github.com/apps/renovate and click **Install**.
+2. Choose your personal account or organization, then pick **All repos** or **Only select repos** (include this one).
+3. Approve the requested permissions to finish installation. Renovate will run shortly after and open PRs based on `renovate.json5`.
+
+Notes:
+- Want to stop it? Uninstall the app or set `"enabled": false` in `renovate.json5`.
+- Need custom rules (schedules, groups, automerge)? Extend `renovate.json5` - no extra onboarding PR is required.
 
 ## FAQ
 
